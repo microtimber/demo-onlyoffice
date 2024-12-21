@@ -15,13 +15,6 @@ export class DocumentForceSaveDto {
    */
   @IsString()
   key: string;
-
-  /**
-   * 使用 JWT 加密文档参数，默认不加密，需要配合 Onlyoffice 的 secret 配置使用。
-   */
-  @IsString()
-  @IsIn(['y', 'n'])
-  useJwtEncrypt?: string = 'n';
 }
 
 /**
@@ -35,13 +28,6 @@ export class DocumentInfoDto {
   @IsNotEmpty()
   @IsString()
   key: string;
-
-  /**
-   * 使用 JWT 加密文档参数，默认不加密，需要配合 Onlyoffice 的 secret 配置使用。
-   */
-  @IsString()
-  @IsIn(['y', 'n'])
-  useJwtEncrypt?: string = 'n';
 
   /**
    * 使用插件。默认不返回插件配置

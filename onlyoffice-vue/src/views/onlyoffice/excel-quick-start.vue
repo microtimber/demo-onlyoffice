@@ -20,7 +20,7 @@ const editorConfig = {
     // 文档地址，绝对路径
     url: `${process.env.VUE_APP_API_SERVER}/static/test1.xlsx`,
     // 文档标题
-    title: '测试表格一.docx'
+    title: '测试表格一.xlsx'
   },
   editorConfig: {
     // 设置语言

@@ -1,10 +1,6 @@
 <template>
   <a-config-provider :locale="locale">
     <div class="page-app">
-      <header class="page-app__header">
-      <router-link class="page-app__title" to="/">Onlyoffice</router-link>
-        <span>{{ $route.meta.title }}</span>
-      </header>
       <div class="page-app__body">
         <router-view />
       </div>

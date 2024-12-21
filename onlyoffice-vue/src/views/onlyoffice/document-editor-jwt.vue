@@ -32,7 +32,7 @@ export default {
     // 获取文档配置信息
     queryDocumentInfo () {
       this.loading.editor = true
-      queryDocumentInfo({ key: 'test4.docx', useJwtEncrypt: 'y' })
+      queryDocumentInfo({ key: 'test4.docx' })
         .then(res => {
           const data = res.data || {}
           const { id, remarks } = data
@@ -48,8 +48,7 @@ export default {
       this.loading.forceSave = true
       const { key } = this.editorConfig.document
       const { id } = this.detail
-      // 如果开启了 JWT 加密，useJwtEncrypt 字段要传递 y
-      forceSaveDocumentInfo({ id, key, useJwtEncrypt: 'n' })
+      forceSaveDocumentInfo({ id, key })
         .then(res => {
           if (res.code === 0) {
             this.$message.success('保存成功')

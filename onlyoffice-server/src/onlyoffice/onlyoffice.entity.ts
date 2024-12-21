@@ -153,13 +153,13 @@ export class OnlyofficeEditorConfig {
    * 编辑器宽度
    */
   @IsNumber()
-  width?: number | string = 1200;
+  width?: number | string = '100%';
 
   /**
    * 编辑器高度
    */
   @IsNumber()
-  height?: number | string = 800;
+  height?: number | string = '600';
 
   /**
    * 文档类型。word：文档，cell：表格，slide：PPT

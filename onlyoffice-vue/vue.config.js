@@ -21,13 +21,13 @@ module.exports = {
     port: process.env.VUE_APP_PORT,
     proxy: {
       [apiPrefix]: {
-        target: 'http://127.0.0.1:3000',
+        target: process.env.VUE_APP_API_SERVER,
         ws: false,
         changeOrigin: true,
         logLevel: 'debug'
       },
       [onlyofficeApiPrefix]: {
-        target: 'http://127.0.0.1:8701',
+        target: process.env.VUE_APP_ONLYOFFICE_SERVER,
         ws: false,
         changeOrigin: true,
         pathRewrite: {

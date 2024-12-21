@@ -9,6 +9,7 @@ export default () => ({
   staticPath: join(process.cwd(), '/static'),
   onlyoffice: {
     secret: process.env.ONLYOFFICE_SECRET,
+    useJwtEncrypt: process.env.ONLYOFFICE_USE_JWT_ENCRYPT,
     domain: process.env.ONLYOFFICE_DOMAIN,
     commandUrl: process.env.ONLYOFFICE_COMMAND_URL,
     callback: process.env.ONLYOFFICE_CALLBACK,

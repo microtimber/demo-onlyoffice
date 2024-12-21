@@ -57,14 +57,14 @@ export class OnlyofficeService {
 
   // 强制保存文档
   async forceSave(body: OnlyofficeForceSaveDto): Promise<OnlyofficeForceSave> {
-    const { key, userdata, useJwtEncrypt } = body;
+    const { key, userdata } = body;
     let newBody: IOnlyofficeForceSave = {
       c: 'forcesave',
       key,
       userdata,
     };
     // 如果是使用了 JWT 加密，重新组装请求参数
-    if (useJwtEncrypt === 'y') {
+    if (this.config.get('onlyoffice.useJwtEncrypt') === 'y') {
       newBody = {
         token: this.jwt.sign(newBody, {
           secret: this.config.get('onlyoffice.secret'),
